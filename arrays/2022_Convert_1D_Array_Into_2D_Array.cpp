@@ -1,8 +1,9 @@
 /**
  * @file    2022_Convert_1D_Array_Into_2D_Array.cpp
+ *
  * @author  Juan Diego Becerra
- * @brief   https://leetcode.com/problems/convert-1d-array-into-2d-array/
  * @date    2022-03-17
+ * @brief   https://leetcode.com/problems/convert-1d-array-into-2d-array/
  *
  */
 
