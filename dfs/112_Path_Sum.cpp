@@ -1,14 +1,14 @@
 /**
  * @file    112_Path_Sum.cpp
+ *
  * @author  Juan Diego Becerra
- * @brief   https://leetcode.com/problems/path-sum/
  * @date    2021-11-01
- * 
+ * @brief   https://leetcode.com/problems/path-sum/
+ *
  */
 
-
-// Definition for a binary tree node.
-struct TreeNode {
+struct TreeNode
+{
     int val;
     TreeNode *left;
     TreeNode *right;
@@ -17,14 +17,17 @@ struct TreeNode {
     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
 };
 
-
-class Solution {
+class Solution
+{
 public:
-    bool hasPathSum(TreeNode* root, int targetSum) {
-        if (root) {
+    bool hasPathSum(TreeNode *root, int targetSum)
+    {
+        if (root)
+        {
             targetSum -= root->val;
-            
-            if (!root->left && !root->right) {
+
+            if (!root->left && !root->right)
+            {
                 return targetSum == 0;
             }
             return hasPathSum(root->left, targetSum) || hasPathSum(root->right, targetSum);

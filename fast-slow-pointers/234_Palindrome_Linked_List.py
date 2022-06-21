@@ -15,7 +15,7 @@ class ListNode:
 # Time: O(n) | Space: O(1)
 def isPalindrome(self, head: ListNode) -> bool:
     middle = middleNode(head)
-    right = reverseLinkedList(middle)
+    right = reverseList(middle)
     left = head
 
     while left and right:

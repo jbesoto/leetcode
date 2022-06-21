@@ -13,7 +13,7 @@ class ListNode:
 
 
 # Time: O(n) | Space: O(1)
-def removeElements(head: Optional[ListNode], val: int) -> Optional[ListNode]:
+def removeElements(head: ListNode, val: int) -> ListNode:
     curr, next_node = head, head
     prev = None
     while next_node:
