@@ -23,12 +23,14 @@ def minDepth_dfs(root: TreeNode) -> int:
 
     if not root.left and not root.right:  # is a leaf?
         return 1
-    if not root.left:
-        return minDepth(root.right) + 1
-    if not root.right:
-        return minDepth(root.left) + 1
 
-    return min(minDepth(root.left), minDepth(root.right)) + 1
+    if not root.left:
+        return minDepth_dfs(root.right) + 1
+
+    if not root.right:
+        return minDepth_dfs(root.left) + 1
+
+    return min(minDepth_dfs(root.left), minDepth_dfs(root.right)) + 1
 
 
 # Time: O(n) | Space: O(m)  m: max nodes at any level
@@ -43,7 +45,9 @@ def minDepth_bfs(root: TreeNode) -> int:
 
         if not node.left and not node.right:
             return depth
+
         if node.left:
             queue.append((node.left, depth + 1))
+
         if node.right:
             queue.append((node.right, depth + 1))
