@@ -27,3 +27,9 @@ public:
         return ans;
     }
 };
+
+int main() {
+    vector<int> ls = {1, 1, 3, 4, 4};
+    Solution s;
+    cout << s.singleNumber(ls) << endl;
+}
