@@ -14,7 +14,7 @@ class TreeNode:
 
 
 # Time: O(h) | Space: O(1)
-def maxDepth(self, root: TreeNode) -> int:
+def maxDepth(root: TreeNode) -> int:
     if not root:
         return 0
 
